@@ -51,19 +51,19 @@ const months = [
       <div className="absolute -top-3 left-0 right-0 flex justify-around px-4 z-20">
         {[...Array(10)].map((_, i) => (
           <div key={i} className="flex flex-col items-center">
-            {/* Ye hai Metal Ring (Spiral) */}
-            <div className="w-2 h-6 bg-gradient-to-b from-gray-400 to-gray-600 rounded-full border border-gray-500 shadow-sm"></div>
-            {/* Ye hai Calendar ka Hole */}
+            
+            <div className="w-2 h-6 bg-linear-to-b from-gray-400 to-gray-600 rounded-full border border-gray-500 shadow-sm"></div>
+            
             <div className="w-3 h-3 bg-zinc-800 rounded-full -mt-1"></div>
           </div>
         ))}
       </div>
-      {/* Header Image - Size Chota Kiya */}
+
       <div className="h-40 bg-cover bg-center relative" 
            style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80")' }}>
         <div className="absolute inset-0 bg-black/20 flex items-end p-4">
           <div className="flex gap-3">
-          {/* Month Selection */}
+          
           <select 
             value={format(currentMonth, 'MMMM')}
             onChange={(e) => {
@@ -77,7 +77,7 @@ const months = [
             ))}
           </select>
 
-          {/* Year Selection */}
+          
           <select 
             value={currentMonth.getFullYear()}
             onChange={(e) => {
@@ -94,7 +94,7 @@ const months = [
       </div>
 
       <div className="flex flex-col md:flex-row">
-        {/* Grid Section */}
+        
         <div className="flex-1 p-4">
           <div className="flex justify-between items-center mb-4 text-xs font-bold">
             <button onClick={() => setCurrentMonth(subMonths(currentMonth, 1))} className="p-1 hover:bg-gray-100 rounded-full"><ChevronLeft size={16}/></button>
@@ -121,7 +121,7 @@ const months = [
           </div>
         </div>
 
-        {/* Notes Sidebar - Size Chota Kiya */}
+        
         <div className="w-full md:w-56 bg-gray-50 p-4 border-l border-gray-100">
           <div className="flex items-center gap-2 mb-2 font-bold text-gray-700 uppercase text-[10px] tracking-widest">
             <NotebookPen size={14} /> <span>Notes</span>
